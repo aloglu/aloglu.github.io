@@ -6,8 +6,26 @@
     <meta content="width=device-width,initial-scale=1,maximum-scale=1" name=viewport>
     <meta charset=UTF-8>
     <style>
+        :root {
+            --background: #16161D;
+            --greet: #FF6319;
+            --name: #FDBB12;
+            --jobtitle: #01B2DB;
+            --jobinfo: #6CBE45;
+            --contact: #DB5AA2;
+        }
+        @media (prefers-color-scheme: light) {
+        :root {
+            --background: #F5F5F5;
+            --greet: #FF1300;
+            --name: #FD8012;
+            --jobtitle: #018Af4;
+            --jobinfo: #4EBE45;
+            --contact: #D230B3;
+        }
+        }
         body {
-            background-color: #16161D;
+            background: var(--background);
             font-family: Helvetica;
             font-weight: 600;
             font-size: 2.2em;
@@ -16,7 +34,6 @@
             width: 22.75em;
             margin: 1.25em auto 0 1.25em
         }
-
         @media (max-width:60em) {
             body {
                 position: relative;
@@ -25,45 +42,35 @@
                 margin: 0
             }
         }
-
         a {
             color: inherit
         }
-
         a:hover {
             position: relative;
             top: -2px;
             transition: .125s ease-out;
         }
-
         p {
             line-height: 1.25em
         }
-
-        .orange {
-            color: #ff6319
+        .greet {
+            color: var(--greet)
         }
-        
-        .yellow {
-            color: #fdbb12
+        .name {
+            color: var(--name)
         }
-
-        .light-blue {
-            color: #01b2db
+        .jobtitle {
+            color: var(--jobtitle)
         }
-
-        .green {
-            color: #6cbe45
+        .jobinfo {
+            color: var(--jobinfo)
         }
-
-        .pink {
-            color: #db5aa2
+        .contact {
+            color: var(--contact)
         }
-
         ::selection {
             background-color: rgba(0, 0, 0, 0)
         }
-
         ::-moz-selection {
             background-color: rgba(0, 0, 0, 0)
         }
@@ -71,11 +78,11 @@
 </head>
 <body>
     <p>
-        <span class=orange>Hi!</span>
-        <span class=yellow>I'm Abdullah Aloğlu</span>
-        <span class=light-blue title="English → Turkish → English">I work as a translator</span>
-        <span class=green>My works include various projects for <a href=https://eff.org>EFF</a>, and <a href=https://uahirise.org/tr>HiRISE</a> for NASA/UofA</span>
-        <span class=pink>Feel free to <a href="javascript:window.location.href=atob('bWFpbHRvOmFiZHVsbGFoQGFsb2cubHU=')">get in touch</a></span>
+        <span class=greet>Hi!</span>
+        <span class=name>I'm Abdullah Aloğlu</span>
+        <span class=jobtitle title="English → Turkish → English">I work as a translator</span>
+        <span class=jobinfo>My works include various projects for <a href=https://eff.org>EFF</a>, and <a href=https://uahirise.org/tr>HiRISE</a> for NASA/UofA</span>
+        <span class=contact>Feel free to <a href="javascript:window.location.href=atob('bWFpbHRvOmFiZHVsbGFoQGFsb2cubHU=')">get in touch</a></span>
     </p>
 </body>
 </html>
